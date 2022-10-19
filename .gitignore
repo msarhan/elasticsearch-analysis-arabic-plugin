@@ -1,0 +1,9 @@
+hs_err_pid*
+
+target/
+build/
+.idea
+*.iml
+.gradle
+.DS_Store
+dependency-reduced-pom.xml
