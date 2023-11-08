@@ -4,7 +4,7 @@
 
   <groupId>com.github.msarhan</groupId>
   <artifactId>elasticsearch-analysis-arabic</artifactId>
-  <version>1.1.0</version>
+  <version>1.2.0</version>
   <packaging>jar</packaging>
   <name>${project.groupId}:${project.artifactId}</name>
   <description>Elasticsearch Arabic Analysis Plugin</description>
@@ -36,7 +36,7 @@
     <jdk.version>17</jdk.version>
     <maven.compiler.source>${jdk.version}</maven.compiler.source>
     <maven.compiler.target>${jdk.version}</maven.compiler.target>
-    <elasticsearch.version>8.5.0</elasticsearch.version>
+    <elasticsearch.version>8.10.4</elasticsearch.version>
     <log4j.version>2.19.0</log4j.version>
   </properties>
 
@@ -104,6 +104,20 @@
             <phase>package</phase>
             <goals>
               <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.2.0</version>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
             </goals>
           </execution>
         </executions>

@@ -1,6 +1,20 @@
 services:
 
+  # https://github.com/docker/for-mac/issues/7047#issuecomment-1791912053
+  fixsysctl:
+    restart: "no"
+    privileged: true
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          memory: 25m
+    image: centos:7
+    command: "sysctl -w vm.max_map_count=262144"
+
   setup:
+    depends_on:
+      - fixsysctl
     image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
     volumes:
       - certs:/usr/share/elasticsearch/config/certs
