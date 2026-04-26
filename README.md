@@ -1,6 +1,6 @@
 # Arabic Analysis Plugin for Elasticsearch
 
-Arabic Analysis plugin for Elasticsearch. It uses [lucene-arabic-analyzer](https://github.com/msarhan/lucene-arabic-analyzer) to extract arabic token roots.
+Arabic Analysis plugin for Elasticsearch. It uses [lucene-arabic-analyzer](https://github.com/msarhan/lucene-arabic-analyzer) to extract Arabic token roots.
 
 
 ## Features
