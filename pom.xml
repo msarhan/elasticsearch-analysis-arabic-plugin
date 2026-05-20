@@ -36,7 +36,7 @@
     <jdk.version>17</jdk.version>
     <maven.compiler.source>${jdk.version}</maven.compiler.source>
     <maven.compiler.target>${jdk.version}</maven.compiler.target>
-    <elasticsearch.version>8.11.4</elasticsearch.version>
+    <elasticsearch.version>8.13.4</elasticsearch.version>
     <log4j.version>2.19.0</log4j.version>
   </properties>
 
