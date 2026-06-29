@@ -28,19 +28,19 @@ This plugin is preconfigured with builtin normalization, stop-words and a stemme
 
 ## Plugin in action
 1. Build the plugin:
-````
-mvn clean package
-````
+    ````
+    mvn clean package
+    ````
 2. Run Elasticsearch and install plugin inside a docker container:
-````
-docker compose up
-````
+    ````
+    docker compose up
+    ````
 3. Open `http://localhost:5601/` and login with `elastic/elastic` credentials.
 4. Go to `Dev Tools` and examine the plugin:
-````
-GET _analyze
-{
-  "text": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
-  "analyzer": "arabic-root"
-}
-````
+    ````
+    GET _analyze
+    {
+      "text": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+      "analyzer": "arabic-root"
+    }
+    ````

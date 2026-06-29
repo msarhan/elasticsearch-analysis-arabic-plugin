@@ -56,7 +56,7 @@ services:
     volumes:
       - certs:/usr/share/elasticsearch/config/certs
       - esdata01:/usr/share/elasticsearch/data
-      - ./target/releases/elasticsearch-analysis-arabic-${PLUGIN_VERSION}.zip:/usr/share/elasticsearch/plugin/elasticsearch-analysis-arabic-${PLUGIN_VERSION}.zip
+      - ./target/releases/elasticsearch-analysis-arabic-${PLUGIN_VERSION}.zip:/tmp/elasticsearch-analysis-arabic-${PLUGIN_VERSION}.zip
     ports:
       - ${ES_PORT}:9200
     environment:
@@ -93,7 +93,7 @@ services:
       retries: 120
     command: >
         bash -c "cd /usr/share/elasticsearch
-        && yes | ./bin/elasticsearch-plugin install file:./plugin/elasticsearch-analysis-arabic-$PLUGIN_VERSION.zip
+        && yes | ./bin/elasticsearch-plugin install file:/tmp/elasticsearch-analysis-arabic-$PLUGIN_VERSION.zip
         && /usr/local/bin/docker-entrypoint.sh eswrapper"
 
   kibana:
